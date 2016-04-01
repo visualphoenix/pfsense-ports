@@ -9,7 +9,7 @@ CATEGORIES=	security
 USE_GITHUB=	yes
 GH_ACCOUNT=	gsliepen
 GH_PROJECT=	tinc
-GH_TAGNAME=	4437ac3
+GH_TAGNAME=	e44c337
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Virtual Private Network (VPN) daemon
