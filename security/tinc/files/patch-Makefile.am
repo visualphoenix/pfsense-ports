@@ -1,0 +1,11 @@
+--- Makefile.am.orig	2016-04-01 22:44:05.000000000 +0000
++++ Makefile.am	2016-04-01 22:44:25.000000000 +0000
+@@ -11,7 +11,7 @@
+ # If git describe works, force autoconf to run in order to make sure we have the
+ # current version number from git in the resulting configure script.
+ configure-version:
+-	-cd $(srcdir) && git describe && autoconf --force
++	-cd $(srcdir) && git describe --always && autoconf --force
+ 
+ # Triggering the README target means we are building a distribution (make dist).
+ README: configure-version

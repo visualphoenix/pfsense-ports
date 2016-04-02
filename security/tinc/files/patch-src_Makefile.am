@@ -1,0 +1,17 @@
+--- src/Makefile.am.orig	2016-03-07 20:54:13.000000000 +0000
++++ src/Makefile.am	2016-04-02 00:16:47.000000000 +0000
+@@ -3,11 +3,11 @@
+ sbin_PROGRAMS = tincd tinc sptps_test sptps_keypair
+ 
+ ## Make sure version.c is always rebuilt with the latest git information
+-.PHONY: ${srcdir}/version.c version_git.h
++.PHONY: version.c version_git.h
+ version_git.h:
+ 	echo >$@
+-	-(cd $(srcdir) && git describe) && echo '#define GIT_DESCRIPTION "'`(cd $(srcdir) && git describe) | sed 's/release-//'`'"' >$@
+-${srcdir}/version.c: version_git.h
++	-(cd $(srcdir) && git describe --always) && echo '#define GIT_DESCRIPTION "'`(cd $(srcdir) && git describe --always) | sed 's/release-//'`'"' >$@
++version.c: version_git.h
+ 
+ if LINUX
+ sbin_PROGRAMS += sptps_speed

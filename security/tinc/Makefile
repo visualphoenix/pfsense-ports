@@ -18,6 +18,7 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS=	liblzo2.so:${PORTSDIR}/archivers/lzo2
 
+
 USES=		autoreconf
 CPE_VENDOR=	tinc-vpn
 USE_OPENSSL=	yes
