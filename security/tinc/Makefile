@@ -31,7 +31,6 @@ INFO=		tinc
 PLIST_FILES=	sbin/tincd \
 		sbin/tinc \
 		sbin/sptps_keypair \
-		sbin/sptps_speed \
 		sbin/sptps_test \
 		man/man5/tinc.conf.5.gz man/man8/tincd.8.gz
 
